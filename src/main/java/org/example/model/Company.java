@@ -1,12 +1,14 @@
 package org.example.model;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Company {
     private String name;
     private String cif;
     private Departament[] departaments;
 
+    private final Scanner scanner = new Scanner(System.in);
 
     public Company(String name, String cif, Departament[] departaments) {
         this.name = name;
@@ -15,7 +17,36 @@ public class Company {
     }
 
 
+    public final void showInfo(){
+        System.out.println("        EMPRESA         ");
+        System.out.println("Nombre: " + name);
+        System.out.println("CIF: " + cif);
+        System.out.println("Departamentos");
+        for (Departament d : departaments){
+            d.showInfo();
+        }
+    }
 
+
+    public final void optionOne(){
+        System.out.print("Introduce el nombre del departamento: ");
+        var name = scanner.nextLine();
+        if (findDepartamentWithName(name) != null){
+            findDepartamentWithName(name).showInfo();
+        } else {
+            System.out.println("No se encuentra el departamento.");
+        }
+    }
+
+
+    public final Departament findDepartamentWithName(String name){
+        for (Departament departament : departaments){
+            if (departament.getName().equals(name)){
+                return departament;
+            }
+        }
+        return null;
+    }
 
     //Constructores, getters, setters, hassCode y toString
 

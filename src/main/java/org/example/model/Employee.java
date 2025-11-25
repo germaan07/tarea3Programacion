@@ -1,20 +1,18 @@
 package org.example.model;
 
-import org.example.Enums.Positions;
-
 import java.util.Objects;
 
 public class Employee {
     private String nif;
     private String name;
-    private String surname;
+    private String surnames;
     private String position;
 
 
-    public Employee(String nif, String name, String surname, String position) {
+    public Employee(String nif, String name, String surnames, String position) {
         this.nif = nif;
         this.name = name;
-        this.surname = surname;
+        this.surnames = surnames;
         this.position = position;
     }
 
@@ -22,7 +20,9 @@ public class Employee {
 
     public final void showInfo(){
         System.out.println("        EMPLEADO        ");
+        System.out.println("            -NIF: " + nif);
         System.out.println("            -Nombre: " + name);
+        System.out.println("            -Apellidos: " + surnames);
     }
 
     //Constructores, getters, setters, hassCode y toString
@@ -44,12 +44,12 @@ public class Employee {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getSurnames() {
+        return surnames;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setSurnames(String surnames) {
+        this.surnames = surnames;
     }
 
     public String getPosition() {
@@ -65,12 +65,12 @@ public class Employee {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(nif, employee.nif) && Objects.equals(name, employee.name) && Objects.equals(surname, employee.surname) && Objects.equals(position, employee.position);
+        return Objects.equals(nif, employee.nif) && Objects.equals(name, employee.name) && Objects.equals(surnames, employee.surnames) && Objects.equals(position, employee.position);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nif, name, surname, position);
+        return Objects.hash(nif, name, surnames, position);
     }
 
 
@@ -79,7 +79,7 @@ public class Employee {
         return "Employee{" +
                 "nif='" + nif + '\'' +
                 ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                ", surname='" + surnames + '\'' +
                 ", position='" + position + '\'' +
                 '}';
     }
