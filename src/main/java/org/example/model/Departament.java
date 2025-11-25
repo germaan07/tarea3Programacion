@@ -26,7 +26,21 @@ public class Departament {
     }
 
 
+    public final void showEmployees(){
+        for (Employee e: employees){
+            e.showInfo();
+        }
+    }
 
+
+    public final Employee showEmployeeInfo(String nif){
+        for (Employee e : employees){
+            if (e.getNif().equals(nif)){
+                return e;
+            }
+        }
+        return null;
+    }
 
 
     //Constructores, getters, setters, hassCode y toString

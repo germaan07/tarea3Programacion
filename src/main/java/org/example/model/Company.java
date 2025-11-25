@@ -28,11 +28,51 @@ public class Company {
     }
 
 
+    public final void printMenu(){
+        System.out.println("OPCIONES DE LA APP");
+        System.out.println("    1. Mostrar Departamento mediante un Nombre.");
+        System.out.println("    2. Mostrar los Empleados de un Departamento mediante un Nombre.");
+        System.out.println("    3. Mostrar la información de un Empleado Departamento mediante un Nombre y un NIF de empleado.");
+    }
+
+
     public final void optionOne(){
-        System.out.print("Introduce el nombre del departamento: ");
-        var name = scanner.nextLine();
+        var name = getDepartamentName();
         if (findDepartamentWithName(name) != null){
             findDepartamentWithName(name).showInfo();
+        } else {
+            System.out.println("No se encuentra el departamento.");
+        }
+    }
+
+    private String getDepartamentName() {
+        System.out.print("Introduce el nombre del departamento: ");
+        var name = scanner.nextLine();
+        return name;
+    }
+
+
+    public final void optionTwo(){
+        var name =getDepartamentName();
+        if (findDepartamentWithName(name) != null){
+            findDepartamentWithName(name).showEmployees();
+        } else {
+            System.out.println("No se encuentra el departamento.");
+        }
+    }
+
+
+    public final void optionTrhee(){
+        var name = getDepartamentName();
+        var nif = getEmployeeNif();
+
+        if (findDepartamentWithName(name) != null){
+            if (findDepartamentWithName(name).showEmployeeInfo(nif) != null){
+                findDepartamentWithName(name).showEmployeeInfo(nif).showInfo();
+            } else {
+                System.out.println("No se encuentra el empleado.");
+            }
+
         } else {
             System.out.println("No se encuentra el departamento.");
         }
@@ -46,6 +86,13 @@ public class Company {
             }
         }
         return null;
+    }
+
+
+    private String getEmployeeNif() {
+        System.out.print("Introduce el NIF del empleado: ");
+        var nif = scanner.nextLine();
+        return nif;
     }
 
     //Constructores, getters, setters, hassCode y toString
