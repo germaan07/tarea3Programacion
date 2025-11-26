@@ -1,5 +1,6 @@
 package org.example.readers;
 
+import org.example.Enums.Positions;
 import org.example.model.Departament;
 import org.example.model.Employee;
 
@@ -17,7 +18,7 @@ public class DepartamentReader {
     public Departament read(){
         System.out.println("DEPARTAMENTO");
         System.out.println(" ");
-        System.out.print("Introduce el nomrbe del departamento: ");
+        System.out.print("Introduce el nombre del departamento: ");
         var name = scanner.nextLine();
 
         System.out.print("Introduce el presupuesto del departamento: ");
@@ -28,6 +29,7 @@ public class DepartamentReader {
         scanner.nextLine();
 
         Employee[] employees = new Employee[numEmployees];
+        Positions.printMenu();
 
         for (int e = 0; e < numEmployees; e++){
             employees[e] = employeeReader.read();

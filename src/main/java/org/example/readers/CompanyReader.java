@@ -19,7 +19,7 @@ public class CompanyReader {
 
 
     public Company read(){
-        System.out.println("        DATOS DE LA EMPRESA         ");
+        System.out.println("--------DATOS DE LA EMPRESA---------");
         System.out.println(" ");
         System.out.print("Introduce el NOMBRE de la empresa: ");
         var name = scanner.nextLine();
@@ -34,6 +34,7 @@ public class CompanyReader {
         Departament[] departamets = new Departament[numOfDepartaments];
 
         for (int d = 0; d < numOfDepartaments; d++){
+            System.out.println(" ");
             departamets[d] = departamentReader.read();
         }
 

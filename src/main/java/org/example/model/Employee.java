@@ -1,15 +1,17 @@
 package org.example.model;
 
+import org.example.Enums.Positions;
+
 import java.util.Objects;
 
 public class Employee {
     private String nif;
     private String name;
     private String surnames;
-    private String position;
+    private Positions position;
 
 
-    public Employee(String nif, String name, String surnames, String position) {
+    public Employee(String nif, String name, String surnames, Positions position) {
         this.nif = nif;
         this.name = name;
         this.surnames = surnames;
@@ -23,6 +25,7 @@ public class Employee {
         System.out.println("            -NIF: " + nif);
         System.out.println("            -Nombre: " + name);
         System.out.println("            -Apellidos: " + surnames);
+        System.out.println("            -Puesto: " + position);
     }
 
     //Constructores, getters, setters, hassCode y toString
@@ -52,11 +55,11 @@ public class Employee {
         this.surnames = surnames;
     }
 
-    public String getPosition() {
+    public Positions getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(Positions position) {
         this.position = position;
     }
 
