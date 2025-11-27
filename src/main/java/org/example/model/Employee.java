@@ -21,11 +21,11 @@ public class Employee {
 
 
     public final void showInfo(){
-        System.out.println("        EMPLEADO        ");
-        System.out.println("            -NIF: " + nif);
-        System.out.println("            -Nombre: " + name);
-        System.out.println("            -Apellidos: " + surnames);
-        System.out.println("            -Puesto: " + position);
+        System.out.println("---EMPLEADO---");
+        System.out.println("        -NIF: " + nif);
+        System.out.println("        -Nombre: " + name);
+        System.out.println("        -Apellidos: " + surnames);
+        System.out.println("        -Puesto: " + position);
     }
 
     //Constructores, getters, setters, hassCode y toString

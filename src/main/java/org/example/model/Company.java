@@ -18,7 +18,7 @@ public class Company {
 
 
     public final void showInfo(){
-        System.out.println("        EMPRESA         ");
+        System.out.println("        ---EMPRESA---      ");
         System.out.println("Nombre: " + name);
         System.out.println("CIF: " + cif);
         System.out.println("Departamentos");

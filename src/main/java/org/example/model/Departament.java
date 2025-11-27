@@ -16,10 +16,10 @@ public class Departament {
 
 
     public final void showInfo(){
-        System.out.println("    DEPARTAMENTO ");
-        System.out.println("        Nombre: " + name);
-        System.out.println("        Presupuesto: " + budget);
-        System.out.println("        EMPLEADOS: ");
+        System.out.println("    ---DEPARTAMENTO---  ");
+        System.out.println("    Nombre: " + name);
+        System.out.println("    Presupuesto: " + budget);
+        System.out.println("    EMPLEADOS: ");
         for (Employee e: employees){
             e.showInfo();
         }

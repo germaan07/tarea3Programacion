@@ -22,7 +22,7 @@ public class EmployeeReader {
         var name = scanner.nextLine();
 
         System.out.print("Introduce los apellidos del empleado: ");
-        var surnames = scanner.next();
+        var surnames = scanner.nextLine();
 
         var correctPosition = false;
 
