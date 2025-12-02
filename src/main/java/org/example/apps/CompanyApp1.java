@@ -1,6 +1,5 @@
 package org.example.apps;
 
-import org.example.Enums.Positions;
 import org.example.model.Company;
 import org.example.readers.CompanyReader;
 import org.example.readers.DepartamentReader;

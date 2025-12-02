@@ -1,6 +1,6 @@
 package org.example.model;
 
-import org.example.Enums.Positions;
+import org.example.enums.Positions;
 
 import java.util.Objects;
 

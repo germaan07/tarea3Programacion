@@ -55,7 +55,8 @@ public class Company {
         System.out.println("OPCIONES DE LA APP");
         System.out.println("    1. Mostrar Departamento mediante un Nombre.");
         System.out.println("    2. Mostrar los Empleados de un Departamento mediante un Nombre.");
-        System.out.println("    3. Mostrar la información de un Empleado Departamento mediante un Nombre y un NIF de empleado.");
+        System.out.println("    3. Mostrar la información de un Empleado mediante su NIF.");
+        System.out.println("    4. Salir.");
     }
 
 
@@ -125,6 +126,7 @@ public class Company {
         var nif = scanner.nextLine();
         return nif;
     }
+
 
     //Constructores, getters, setters, hassCode y toString
 

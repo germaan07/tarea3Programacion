@@ -1,6 +1,6 @@
 package org.example.readers;
 
-import org.example.Enums.Positions;
+import org.example.enums.Positions;
 import org.example.model.Employee;
 
 import java.util.Scanner;
