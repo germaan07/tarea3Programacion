@@ -27,47 +27,6 @@ public class Company {
         }
     }
 
-
-    public final void bucleMenu(){
-        var cont = true;
-        do {
-            printMenu();
-            var option = selectOption();
-
-            if (option == 1){
-                optionOne();
-            } else if (option == 2) {
-                optionTwo();
-            } else if (option == 3) {
-                optionTrhee();
-            } else if (option == 4) {
-                System.out.print("Saliendo del programa, adiós.");
-                cont = false;
-            } else {
-                System.out.print("La opción introducida es errónea, por favor introduzca una acción válida.");
-            }
-
-        } while(cont);
-    }
-
-
-    public final void printMenu(){
-        System.out.println("OPCIONES DE LA APP");
-        System.out.println("    1. Mostrar Departamento mediante un Nombre.");
-        System.out.println("    2. Mostrar los Empleados de un Departamento mediante un Nombre.");
-        System.out.println("    3. Mostrar la información de un Empleado mediante su NIF.");
-        System.out.println("    4. Salir.");
-    }
-
-
-    public final int selectOption(){
-        System.out.print("Introduce la acción que desea realizar: ");
-        var optionSelected = scanner.nextInt();
-        scanner.nextLine();
-        return optionSelected;
-    }
-
-
     public final void optionOne(){
         var name = getDepartamentName();
         if (findDepartamentWithName(name) != null){
